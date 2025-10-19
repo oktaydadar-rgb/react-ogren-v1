@@ -3,6 +3,7 @@ function ProductCard(props) {
   const image = props.image;
   const title = props.title;
   const price = props.price;
+  const description = props.description;
 
   return (
     <div className="product-card">
@@ -10,6 +11,7 @@ function ProductCard(props) {
       <div className="product-info">
         <strong className="product-title">{title}</strong>
         <span className="product-price">{price}</span>
+        <p className="product-description">{description}</p>
       </div>
     </div>
   );
