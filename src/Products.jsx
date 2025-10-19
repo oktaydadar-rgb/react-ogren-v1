@@ -11,7 +11,7 @@ function Products() {
         <ProductCard
           image="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
           title="Çanta"
-          price="34"
+          price="89"
         />
         <ProductCard
           image="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
