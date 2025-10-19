@@ -1,7 +1,7 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 import "./Products.css";
-import ProductCardData from "./data/productsData.js";
+import ProductCardData from "../../data/productsData.js";
 function Products() {
   return (
     <div className="products">

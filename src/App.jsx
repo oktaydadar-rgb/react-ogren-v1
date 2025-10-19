@@ -1,5 +1,5 @@
 import React from "react";
-import Products from "./Products.jsx";
+import Products from "./components/Products/Products.jsx";
 
 function App() {
   return (
