@@ -8,18 +8,15 @@ function Products() {
       <h2>Products Component</h2>
 
       <div className="products-wrapper">
-        <ProductCard
-          image={ProductCardData[0].image}
-          title={ProductCardData[0].title}
-          price={ProductCardData[0].price}
-          description={ProductCardData[0].description}
-        />
-        <ProductCard
-          image={ProductCardData[1].image}
-          title={ProductCardData[1].title}
-          price={ProductCardData[1].price}
-          description={ProductCardData[1].description}
-        />
+        {ProductCardData.map((product, index) => (
+          <ProductCard
+            key={product.id ?? index}
+            image={product.image}
+            title={product.title}
+            price={product.price}
+            description={product.description}
+          />
+        ))}
       </div>
     </div>
   );
