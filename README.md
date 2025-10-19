@@ -4,4 +4,4 @@ git hub vscode dosya aktarmak için https://git-scm.com/ adresindeki dosya kurul
 
 https://fakestoreapi.com/ api ve resimler buunabilir.
 
-props 2 hafta 2 3:56
+Counter.jsx useState ornegi
