@@ -1,11 +1,11 @@
 import React from "react";
-import ProductCard from "./ProductCard";
+import Products from "./Products.jsx";
 
 function App() {
   return (
     <div>
       <h1>Hello App</h1>
-      <ProductCard />
+      <Products />
     </div>
   );
 }
