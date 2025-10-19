@@ -1,8 +1,8 @@
 import "./ProductCard.css";
-function ProductCard() {
-  const image = "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png";
-  const title = "Çanta";
-  const price = 56;
+function ProductCard(props) {
+  const image = props.image;
+  const title = props.title;
+  const price = props.price;
 
   return (
     <div className="product-card">
