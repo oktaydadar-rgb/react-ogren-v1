@@ -1,22 +1,27 @@
-import React from "react";
+import { useState } from "react";
 import ProductCard from "./ProductCard";
 import "./Products.css";
 import ProductCardData from "../../data/productsData.js";
 function Products() {
+  const [titleState, setTitleState] = useState("Title");
   return (
     <div className="products">
       <h2>Products Component</h2>
 
       <div className="products-wrapper">
-        {ProductCardData.map((product, index) => (
-          <ProductCard
-            key={product.id ?? index}
-            image={product.image}
-            title={product.title}
-            price={product.price}
-            description={product.description}
-          />
-        ))}
+        {ProductCardData.map((product, index) => {
+          return (
+            <ProductCard
+              key={product.id ?? index}
+              image={product.image}
+              title={product.title}
+              price={product.price}
+              description={product.description}
+              titleState={titleState}
+              setTitleState={setTitleState}
+            />
+          );
+        })}
       </div>
     </div>
   );

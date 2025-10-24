@@ -13,3 +13,26 @@ display: grid;
 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 
 ## grid columlarda auto ekran ozelligi icin kullanılır. bu kodta 250px gelince otomatik resize hesaplamasi yapar.
+
+**_---_**parent child tüm title kolonu değiştirmek için kod örneği
+
+products içereği
+const [titleState, setTitleState] = useState("Title");
+
+props için :
+titleState={titleState}
+setTitleState={setTitleState}
+
+productCard içeriği
+
+function handleTitleChange() {
+props.setTitleState("Title Değişti");
+}
+
+<strong className="product-title">{props.titleState}</strong>
+
+<button onClick={handleTitleChange}> Sepete Ekle</button>
+
+**_---_**
+
+aaa
