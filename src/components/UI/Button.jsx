@@ -1,5 +1,7 @@
 import "./Button.css";
-function Button() {
-  return <button className="btn-primary">Sepete Ekle</button>;
+function Button(props) {
+  const classNames = `btn btn-${props.type} btn-${props.size}`;
+
+  return <button className={classNames}>{props.title}</button>;
 }
 export default Button;
