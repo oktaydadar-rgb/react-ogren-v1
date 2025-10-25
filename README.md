@@ -67,3 +67,5 @@ Projenize ant.design kurduktan sonra örneğin, bir form bileşeni oluşturmak i
 Ant Design ayrıca, uygulamanızın görünümünü ve hissini özelleştirmenize olanak tanıyan temalar ve stil seçenekleri sunar. Böylece, projenizin marka kimliğine uygun bir kullanıcı arayüzü oluşturabilirsiniz.
 
 Siz de kendi projelerinizde Ant Design’ı deneyerek, geliştirme sürecinizi hızlandırabilir ve kullanıcı deneyimini iyileştirebilirsiniz. Bu kütüphane, modern web geliştirmenin karşılaştığı pek çok zorluğa çözüm sunar ve projelerinizi bir sonraki seviyeye taşımanıza yardımcı olur.
+
+3 hafta 1.gun 40 dk.
