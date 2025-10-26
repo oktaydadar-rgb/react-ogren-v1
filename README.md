@@ -197,3 +197,7 @@ Elbette gerçek hayat için mantıklı bir işlem değil bu ama spreading özell
         Title <input type="text" name="title" placeholder="Bir Title Ekle!" />
       </label>
     </form>
+
+**Onclick de parametre gönder için kodu arrow functşon ile yazılmalıdır.**
+
+event.preventDefault() form nesnelerindeki onsubmit olan refreh olmayı durdurur.
