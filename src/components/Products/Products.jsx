@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ProductCard from "./ProductCard";
 import "./Products.css";
-import ProductCardData from "../../data/productsData.js";
+import productsData from "../../data/productsData.js";
 import AddProductForm from "./AddProductForm.jsx";
 function Products() {
   const [titleState, setTitleState] = useState("Title");
@@ -11,7 +11,7 @@ function Products() {
       <AddProductForm />
       <h2>Products Component</h2>
       <div className="products-wrapper">
-        {ProductCardData.map((product, index) => {
+        {productsData.map((product, index) => {
           return (
             <ProductCard
               key={product.id ?? index}
