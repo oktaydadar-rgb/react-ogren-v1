@@ -201,3 +201,5 @@ Elbette gerçek hayat için mantıklı bir işlem değil bu ama spreading özell
 **Onclick de parametre gönder için kodu arrow functşon ile yazılmalıdır.**
 
 event.preventDefault() form nesnelerindeki onsubmit olan refreh olmayı durdurur.
+
+3 hafta 2.ders
