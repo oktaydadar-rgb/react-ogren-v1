@@ -1,7 +1,7 @@
 import { use, useState } from "react";
 import Button from "../UI/Button";
 import "./AddProductForm.css";
-function AddProductForm() {
+function AddProductForm({ productsData, addNewProduct }) {
   const [product, setProduct] = useState({
     title: "",
     price: "",
@@ -17,12 +17,9 @@ function AddProductForm() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    const eklenecekUrunBilgisi = {
-      title: title,
-      price: price,
-      image: image,
-      description: description,
-    };
+    //productsData.push(product);
+    //console.log(productsData);
+    addNewProduct(product);
   }
 
   return (
