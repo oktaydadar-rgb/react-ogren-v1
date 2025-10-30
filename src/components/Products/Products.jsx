@@ -17,10 +17,7 @@ function Products() {
   return (
     <div className="products">
       <h2>Add Product Component</h2>
-      <AddProductForm
-        productsData={productsData}
-        addNewProduct={addNewProduct}
-      />
+      <AddProductForm addNewProduct={addNewProduct} />
       <h2>Products Component</h2>
       <div className="products-wrapper">
         {products.map((product, index) => {

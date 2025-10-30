@@ -1,7 +1,7 @@
 import { use, useState } from "react";
 import Button from "../UI/Button";
 import "./AddProductForm.css";
-function AddProductForm({ productsData, addNewProduct }) {
+function AddProductForm({ addNewProduct }) {
   const [product, setProduct] = useState({
     title: "",
     price: "",
@@ -19,7 +19,12 @@ function AddProductForm({ productsData, addNewProduct }) {
     event.preventDefault();
     //productsData.push(product);
     //console.log(productsData);
-    addNewProduct(product);
+    const newProduct = {
+      ...product,
+      id: Math.random(),
+      price: Number(product.price),
+    };
+    addNewProduct(newProduct);
   }
 
   return (
