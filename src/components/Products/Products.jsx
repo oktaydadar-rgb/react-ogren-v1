@@ -11,7 +11,7 @@ function Products() {
   //alt child dan parent veriyi parametre gönderebiliriz. Örnek addNewProduct function daki newProduct parametresi gibi.
   function addNewProduct(newProduct) {
     setProducts([...products, newProduct]); //spreaad bu şeklde sona ekler.
-    setProducts([newProduct, ...products]); //spreaad bbu şekilde ekranın en başına ekler
+    //setProducts([newProduct, ...products]); //spreaad bbu şekilde ekranın en başına ekler
   }
 
   return (

@@ -1,6 +1,9 @@
 import { use, useState } from "react";
 import Button from "../UI/Button";
 import "./AddProductForm.css";
+import ProductInfo from "./ProductInfo";
+import productInputs from "../../data/productInputs";
+
 function AddProductForm({ addNewProduct }) {
   const [product, setProduct] = useState({
     title: "",
@@ -10,6 +13,7 @@ function AddProductForm({ addNewProduct }) {
   });
   function handleChange(event) {
     const name = event.target.name;
+    x;
     const value = event.target.value;
     setProduct({ ...product, [name]: value }); //spread operator ile önceki değerleri koruyoruz.
     //javascript computed properties
@@ -24,48 +28,26 @@ function AddProductForm({ addNewProduct }) {
       id: Math.random(),
       price: Number(product.price),
     };
+    console.log(newProduct);
     addNewProduct(newProduct);
   }
 
   return (
     <form className="add-product-form" onSubmit={handleSubmit}>
-      {product.title}
-      <label>
-        Title :
-        <input
-          type="text"
-          onChange={handleChange}
-          name="title"
-          placeholder="Bir ürün ismi giriniz!"
-        />
-      </label>
-      <label>
-        <input
-          type="number"
-          onChange={handleChange}
-          name="price"
-          placeholder="Bir ürün fiyatı giriniz!"
-        />
-      </label>
-      <label>
-        Image URL:
-        <input
-          type="text"
-          onChange={handleChange}
-          name="image"
-          placeholder="Bir ürün görseli giriniz!"
-        />
-      </label>
+      {productInputs.map((input) => (
+        <ProductInfo
+          key={input.name}
+          handleChange={handleChange}
+          //type={input.type}
+          //name={input.name}
+          //placeholder={input.placeholder}
+          //label={input.label}
+          {...input}
 
-      <label>
-        Description:
-        <input
-          type="text"
-          onChange={handleChange}
-          name="description"
-          placeholder="Bir ürün açıklaması giriniz!"
+          //type={input.type}//name={input.name}//placeholder={input.placeholder}//label={input.label} kodu yerine {...input} şekilde yazşlabiliriz
         />
-      </label>
+      ))}
+
       <Button type="primary">Ürünü ekle</Button>
     </form>
   );
