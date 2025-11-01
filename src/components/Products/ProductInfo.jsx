@@ -1,7 +1,6 @@
 import React from "react";
 
-function ProductInfo({ label, type, name, placeholder, handleChange }) {
-  console.log(label, type, name, placeholder, handleChange);
+function ProductInfo({ label, type, name, placeholder, handleChange, value }) {
   return (
     <label>
       {label} :
@@ -10,6 +9,7 @@ function ProductInfo({ label, type, name, placeholder, handleChange }) {
         onChange={handleChange}
         name={name}
         placeholder={placeholder}
+        value={value}
       />
     </label>
   );

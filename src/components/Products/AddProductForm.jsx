@@ -38,6 +38,14 @@ function AddProductForm({ addNewProduct }) {
     };
     console.log(newProduct);
     addNewProduct(newProduct);
+
+    //value'leri sıfırlama -- input ekranını temizleme
+    setProduct({
+      title: "",
+      price: "",
+      image: "",
+      description: "",
+    });
   }
 
   return (
@@ -46,6 +54,7 @@ function AddProductForm({ addNewProduct }) {
         <ProductInfo
           key={input.name}
           handleChange={handleChange}
+          value={product[input.name]}
           //type={input.type}
           //name={input.name}
           //placeholder={input.placeholder}

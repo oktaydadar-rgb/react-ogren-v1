@@ -212,3 +212,6 @@ Object.values(product);
 Object.entries(product);
 
 object içeriğini dizine atar.
+
+react two way binding nasıl yapılır?
+value ile form input temizleme
