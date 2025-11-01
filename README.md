@@ -202,4 +202,13 @@ Elbette gerçek hayat için mantıklı bir işlem değil bu ama spreading özell
 
 event.preventDefault() form nesnelerindeki onsubmit olan refreh olmayı durdurur.
 
-3 hafta 2.ders 48.00 dk
+alert javascript ekranda uarı mesajı çıkartır.
+
+Javascript object metotları
+
+const {title, image,description,category} = product;
+Object.keys(product);
+Object.values(product);
+Object.entries(product);
+
+object içeriğini dizine atar.

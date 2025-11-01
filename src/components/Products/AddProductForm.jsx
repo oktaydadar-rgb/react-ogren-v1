@@ -23,8 +23,11 @@ function AddProductForm({ addNewProduct }) {
     //productsData.push(product);
     //console.log(productsData);
 
-    if (product.title.trim() === "") {
-      alert("Title inputu boş bırakılmaz.");
+    const isFormValid = Object.values(product).every(
+      (value) => value.trim() !== ""
+    );
+    if (!isFormValid) {
+      alert("Lütfen tüm alanları doldurunuz.");
       return;
     }
 
