@@ -13,7 +13,6 @@ function AddProductForm({ addNewProduct }) {
   });
   function handleChange(event) {
     const name = event.target.name;
-    x;
     const value = event.target.value;
     setProduct({ ...product, [name]: value }); //spread operator ile önceki değerleri koruyoruz.
     //javascript computed properties
@@ -23,6 +22,12 @@ function AddProductForm({ addNewProduct }) {
     event.preventDefault();
     //productsData.push(product);
     //console.log(productsData);
+
+    if (product.title.trim() === "") {
+      alert("Title inputu boş bırakılmaz.");
+      return;
+    }
+
     const newProduct = {
       ...product,
       id: Math.random(),
