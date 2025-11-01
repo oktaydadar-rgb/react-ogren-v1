@@ -4,7 +4,6 @@ import "./Products.css";
 import productsData from "../../data/productsData.js";
 import AddProductForm from "./AddProductForm.jsx";
 function Products() {
-  const [titleState, setTitleState] = useState("Title");
   const [products, setProducts] = useState(productsData);
 
   //alt child  parent fonksiynu tetiklemek için fonksiyon yazıp props ile gönderebiliriz.
@@ -13,7 +12,12 @@ function Products() {
     setProducts([...products, newProduct]); //spreaad bu şeklde sona ekler.
     //setProducts([newProduct, ...products]); //spreaad bbu şekilde ekranın en başına ekler
   }
-
+  function handleDeleteProduct(productId) {
+    const filteredProducts = products.filter(
+      (product) => product.id !== productId
+    );
+    setProducts(filteredProducts);
+  }
   return (
     <div className="products">
       <h2>Add Product Component</h2>
@@ -28,8 +32,8 @@ function Products() {
               title={product.title}
               price={product.price}
               description={product.description}
-              titleState={titleState}
-              setTitleState={setTitleState}
+              id={product.id}
+              onDeleteProduct={handleDeleteProduct}
             />
           );
         })}

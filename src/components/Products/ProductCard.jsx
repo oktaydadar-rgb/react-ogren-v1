@@ -1,14 +1,8 @@
 import { useState } from "react";
+import Button from "../UI/Button";
 import "./ProductCard.css";
 function ProductCard(props) {
-  const image = props.image;
-  const title = props.title;
-  const price = props.price;
-  const description = props.description;
-
-  function handleTitleChange() {
-    props.setTitleState("Title Değişti");
-  }
+  const { id, image, title, price, description, onDeleteProduct } = props;
 
   return (
     <div className="product-card">
@@ -18,7 +12,9 @@ function ProductCard(props) {
         <span className="product-price">{price}</span>
         <p className="product-description">{description}</p>
 
-        <button onClick={handleTitleChange}> Sepete Ekle</button>
+        <Button type="danger" onclick={() => onDeleteProduct(id)}>
+          Ürün Sil{" "}
+        </Button>
       </div>
     </div>
   );
